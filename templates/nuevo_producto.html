@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block title %}
+Nuevo producto
+{% endblock %}
+
+{% block content %}
+
+<div class="formulario-contenedor">
+
+  <h2>Registrar nuevo producto</h2>
+
+  <form method="POST" class="formulario">
+
+    <label for="codigo">Código:</label>
+    <input
+      type="text"
+      id="codigo"
+      name="codigo"
+      required
+    >
+
+    <label for="nombre">Nombre:</label>
+    <input
+      type="text"
+      id="nombre"
+      name="nombre"
+      required
+    >
+
+    <label for="categoria">Categoría:</label>
+    <input
+      type="text"
+      id="categoria"
+      name="categoria"
+      required
+    >
+
+    <label for="precio">Precio:</label>
+    <input
+      type="number"
+      id="precio"
+      name="precio"
+      step="0.01"
+      required
+    >
+
+    <label for="existencia">Existencia:</label>
+    <input
+      type="number"
+      id="existencia"
+      name="existencia"
+      min="0"
+      required
+    >
+
+    <label class="checkbox">
+      <input
+        type="checkbox"
+        name="activo"
+        checked
+      >
+      Producto activo
+    </label>
+
+    <div class="acciones-formulario">
+
+      <button type="submit" class="btn-guardar">
+        Guardar producto
+      </button>
+
+      <a href="{{ url_for('inicio') }}" class="btn-cancelar">
+        Cancelar
+      </a>
+
+    </div>
+
+  </form>
+
+</div>
+
+{% endblock %}

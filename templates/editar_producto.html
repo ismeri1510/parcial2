@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block title %}
+Editar producto
+{% endblock %}
+
+{% block content %}
+
+<div class="formulario-contenedor">
+
+  <h2>Editar producto</h2>
+
+  <form method="POST" class="formulario">
+
+    <label for="codigo">Código:</label>
+    <input
+      type="text"
+      id="codigo"
+      name="codigo"
+      value="{{ producto.codigo }}"
+      required
+    >
+
+    <label for="nombre">Nombre:</label>
+    <input
+      type="text"
+      id="nombre"
+      name="nombre"
+      value="{{ producto.nombre }}"
+      required
+    >
+
+    <label for="categoria">Categoría:</label>
+    <input
+      type="text"
+      id="categoria"
+      name="categoria"
+      value="{{ producto.categoria }}"
+      required
+    >
+
+    <label for="precio">Precio:</label>
+    <input
+      type="number"
+      id="precio"
+      name="precio"
+      step="0.01"
+      value="{{ producto.precio }}"
+      required
+    >
+
+    <label for="existencia">Existencia:</label>
+    <input
+      type="number"
+      id="existencia"
+      name="existencia"
+      min="0"
+      value="{{ producto.existencia }}"
+      required
+    >
+
+    <label class="checkbox">
+      <input
+        type="checkbox"
+        name="activo"
+        {% if producto.activo %}checked{% endif %}
+      >
+      Producto activo
+    </label>
+
+    <div class="acciones-formulario">
+
+      <button type="submit" class="btn-guardar">
+        Guardar cambios
+      </button>
+
+      <a href="{{ url_for('inicio') }}" class="btn-cancelar">
+        Cancelar
+      </a>
+
+    </div>
+
+  </form>
+
+</div>
+
+{% endblock %}
