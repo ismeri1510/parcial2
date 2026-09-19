@@ -1,0 +1,138 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  color: #222;
+}
+
+header {
+  background-color: #9f9d49;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+main {
+  width: 90%;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+h2 {
+  color: #1f2937;
+}
+
+a {
+  text-decoration: none;
+}
+
+.tabla-productos {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  margin-top: 20px;
+}
+
+.tabla-productos th,
+.tabla-productos td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.tabla-productos th {
+  background-color: #b3a148;
+  color: white;
+}
+
+.tabla-productos tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.tabla-productos tr:hover {
+  background-color: #eeeeee;
+}
+
+button,
+a {
+  display: inline-block;
+  padding: 7px 12px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+button {
+  background-color: #dc2626;
+  color: white;
+}
+
+a {
+  background-color: #2b6d01;
+  color: white;
+}
+
+form {
+  margin-top: 15px;
+}
+
+input,
+select {
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+/* Formulario */
+
+.formulario-contenedor {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 25px;
+  border-radius: 8px;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.formulario input {
+  width: 100%;
+  padding: 9px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkbox input {
+  width: auto;
+}
+
+.acciones-formulario {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn-guardar {
+  background-color: #16a34a;
+  color: white;
+}
+
+.btn-cancelar {
+  background-color: #6b7280;
+  color: white;
+}
